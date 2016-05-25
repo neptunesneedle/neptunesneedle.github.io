@@ -1,14 +1,6 @@
 [
   
     {
-      "title"    : "Nina",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/ship/Nina/",
-      "date"     : "2014-12-01 00:00:00 -0500"
-    } ,
-  
-    {
       "title"    : "Santa Maria",
       "category" : "",
       "tags"     : "",
@@ -20,7 +12,7 @@
       "title"    : "Pinta",
       "category" : "",
       "tags"     : "",
-      "url"      : "/ships/2014/11/02/Pinta.html",
+      "url"      : "/ships/Pinta/",
       "date"     : "2014-11-02 00:00:00 -0400"
     } ,
   

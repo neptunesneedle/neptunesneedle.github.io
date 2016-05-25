@@ -4,3 +4,4 @@ description: Interactive Database of Maritime History
 url: "http://neptunesneedle.com/"
 baseurl: ""
 permalink: /:categories/:title/
+category-list: [people, ships, events, locations, documents, mapchart]
