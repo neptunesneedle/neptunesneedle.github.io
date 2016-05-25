@@ -1,8 +1,0 @@
----
-layout: post
-title:  Nina
-categories: jekyll update
-permalink: /ship/Nina/
----
-
-Sailed the ocean blue in 1492. 
