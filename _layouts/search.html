@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-	<head>
-		<title> {% if page.title %} {{ page.title }} | {% endif %} Neptune's Needle </title>
-	</head>
+	
+    <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
 
-	{{ content }}
- 
-</html>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>

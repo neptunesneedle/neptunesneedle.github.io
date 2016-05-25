@@ -1,31 +1,24 @@
 ---
 layout: search
-title: Search
 permalink: /search/
 ---
 
-<body>
+<div class="home">
 
-<script>
-  (function() {
-    var cx = '005546405694245892189:zelpoy1bfce';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
+  <h1 class="page-heading">Posts</h1>
 
-<div style="border: 1px solid blue;">
-    <gcse:searchbox></gcse:searchbox>
-</div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-<div>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-<p>Oh boy, let's try to implement this</p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
-
-</body>
