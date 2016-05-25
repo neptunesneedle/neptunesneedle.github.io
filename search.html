@@ -6,23 +6,26 @@ permalink: /search/
 
 <body>
 
-
 <script>
-function myFunction() {
-    var str = "try"; 
-    var n = str.search("try");
-    document.getElementById("demo").innerHTML = n;
-}
+  (function() {
+    var cx = '005546405694245892189:zelpoy1bfce';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 </script>
 
+<div style="border: 1px solid blue;">
+    <gcse:searchbox></gcse:searchbox>
+</div>
 
-<p id="try"></p>
-
-
-<button onclick="myFunction()">Try it</button>
-
+<div>
 
 <p>Oh boy, let's try to implement this</p>
 
+</div>
 
 </body>
