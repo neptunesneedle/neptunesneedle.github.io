@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Pinta"
-categories: jekyll update
-permalink: /ships/Pinta/
+categories: ships
 ---
 
 sail 1492
