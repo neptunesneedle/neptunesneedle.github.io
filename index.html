@@ -3,9 +3,65 @@ layout: homepage
 title: Home
 ---
 
-<p>Neptune's Needle</p>
-<p>An Interactive Database of Maritime History</p>
 
-<form action="/search/">
-    <input type="submit" value="Search">
-</form>
+<body>
+
+	<header>
+    <a href="." title="Home"><img src="img/instant_search_logo@2x.png"/></a>
+    <div id="search-input"></div>
+    <div id="search-input-icon"></div>
+	</header>
+
+	<main>
+		<div id="left-column">
+			<div id="catagories" class="facet"></div>
+			<div id="country" class="facet"></div>
+			<div id="lifespan" class="facet"></div>
+		</div>
+
+
+		<div id="right-column">
+			<div id="sort-by-wrapper"><span id="sort-by"></span></div>
+			<div id="stats"></div>
+			<div id="hits"></div>
+			<div id="pagination"></div>
+		</div>
+	</main>
+
+	<footer>
+    Neptune's Needle
+	</footer>
+
+	<script type="text/html" id="hit-template">
+			<div class="hit">
+				<div class="hit-image">
+				<img src="{{image}}" alt="{{lastname}}">
+			</div>
+			<div class="hit-content">
+			<h3 class="hit-price"></h3>
+				<h2 class="hit-name">{{{_highlightResult.lastname.value}}}</h2>
+				<p class="hit-description">{{{_highlightResult.firstname.value}}}</p>
+				<p class="hit-description">{{{_highlightResult.country.value}}}</p>
+				<p class="hit-description">{{{_highlightResult.lifespan.value}}}</p>
+				<p class="hit-description">{{{_highlightResult.url.value}}}</p>
+			</div>
+		</div>
+	</script>
+	
+	
+	<script type="text/html" id="no-results-template">
+    <div id="no-results-message">
+      <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
+      <a href="." class='clear-all'>Clear search</a>
+    </div>
+  </script>
+	
+	
+
+
+
+
+	<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+	<script src="app.js"></script>
+
+ </body>

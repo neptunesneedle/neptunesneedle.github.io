@@ -3,6 +3,13 @@
 
 	<head>
 		<title> {% if page.title %} {{ page.title }} | {% endif %} Neptune's Needle </title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<!-- IE < 10 support -->
+		<!--[if lte IE 9]>
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
 	{{ content }}
