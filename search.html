@@ -68,13 +68,12 @@
         <h1 class="hit-shipname">{{{ shipprefix }}} {{{ _highlightResult.shipname.value }}}</h1>        
 		<h3 class="hit-lifespan">{{ lifespan }}</h3>
 		<h3 class="hit-lifespan">{{ country }}</h3>
-		
-				<h3 class="hit-lifespan">{{categories}}</h3>
+		<h3 class="hit-lifespan">{{categories}}</h3>
 
 		
 		<h3 class="hit-lifespan">{{ material }}</h3>
         <p class="hit-description">{{{ _highlightResult.description.value }}}</p>
-		<a href="/{{categories}}/{{{firstname}}}{{{lastname}}}">Learn more</a>
+		<a href="{{url}}">Learn more</a>
       </div>
     </div>
     {{/hits}}
