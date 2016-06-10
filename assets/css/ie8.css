@@ -1,66 +1,79 @@
 /*
-	Landscape by Pixelarity
+	Polaris by Pixelarity
 	pixelarity.com @pixelarity
 	License: pixelarity.com/license
 */
 
-/* Button */
+/* List */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		border-color: inherit !important;
+	ul.style1 {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-		input[type="submit"].next,
-		input[type="reset"].next,
-		input[type="button"].next,
-		button.next,
-		.button.next {
-			padding-right: 2.5em;
+		ul.style1 .right {
+			position: relative;
+			-ms-behavior: url("assets/js/ie/PIE.htc");
 		}
 
-			input[type="submit"].next:after,
-			input[type="reset"].next:after,
-			input[type="button"].next:after,
-			button.next:after,
-			.button.next:after {
-				display: none;
-			}
+	ul.icons {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+		ul.icons li a {
+			position: relative;
+			-ms-behavior: url("assets/js/ie/PIE.htc");
+		}
 
 /* Form */
 
-	form .field {
-		float: none;
-		padding-left: 0 !important;
+	form input.text,
+	form select,
+	form textarea {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select,
-	textarea {
-		border-color: inherit !important;
+/* Button */
+
+	.button {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+	.button2 {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+/* Header */
+
+	#logo .pennant span {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+	.dropotron {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
 /* Main */
 
-	#main .slide:before {
-		display: none;
+	#main .box {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-	#main nav > * {
-		line-height: 2.25em;
-		width: auto;
-		padding: 0 2em;
+	#main .image img {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-	#main nav > .next:before {
-		content: 'Next';
-	}
+/* List */
 
-	#main nav > .previous:before {
-		content: 'Prev';
+	ul.style1 .fa:before {
+		font-size: 2.1em;
+		padding-top: 0.2em;
 	}

@@ -4,25 +4,33 @@
 @import 'libs/skel';
 
 /*
-	Landscape by Pixelarity
+	Polaris by Pixelarity
 	pixelarity.com @pixelarity
 	License: pixelarity.com/license
 */
 
-/* Button */
+/* List */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		border-color: inherit !important;
+	ul {
+		&.style1 {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 
-		&.next {
-			padding-right: 2.5em;
+			.right {
+				position: relative;
+				-ms-behavior: url('assets/js/ie/PIE.htc');
+			}
+		}
 
-			&:after {
-				display: none;
+		&.icons {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+
+			li {
+				a {
+					position: relative;
+					-ms-behavior: url('assets/js/ie/PIE.htc');
+				}
 			}
 		}
 	}
@@ -30,45 +38,66 @@
 /* Form */
 
 	form {
-		.field {
-			float: none;
-			padding-left: 0 !important;
+		input.text,
+		select,
+		textarea {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select,
-	textarea {
-		border-color: inherit !important;
+/* Button */
+
+	.button {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
+
+	.button2 {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
+
+/* Header */
+
+	#logo {
+		.pennant {
+			span {
+				position: relative;
+				-ms-behavior: url('assets/js/ie/PIE.htc');
+			}
+		}
+	}
+
+	.dropotron {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
 /* Main */
 
 	#main {
-		.slide {
-			&:before {
-				display: none;
-			}
+		.box {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 
-		nav {
-			> * {
-				line-height: 2.25em;
-				width: auto;
-				padding: 0 2em;
+		.image {
+			img {
+				position: relative;
+				-ms-behavior: url('assets/js/ie/PIE.htc');
 			}
+		}
+	}
 
-			> .next {
-				&:before {
-					content: 'Next';
-				}
-			}
+/* List */
 
-			> .previous {
+	ul {
+		&.style1 {
+			.fa {
 				&:before {
-					content: 'Prev';
+					font-size: 2.1em;
+					padding-top: 0.2em;
 				}
 			}
 		}
