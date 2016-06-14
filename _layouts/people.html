@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
 
+  {% include head.html %}
+ 
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+ 
+  {% include header.html %}
 			
 			{{ content }}
- 
 
+  {% include footer.html %}
+
+		</div>
+			
+  {% include scripts.html %}
+			
+    </body>
+	
 </html>
