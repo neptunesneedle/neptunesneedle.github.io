@@ -1310,17 +1310,17 @@
 /* Basic */
 
 	body {
-		background: #2a2a2a;
-		color: #4b4c4b;
+		background: #76B3DF;
+		color: black;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 12pt;
+		font-size: 16pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		line-height: 1.6em;
 	}
 
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 12pt;
+		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.75em;
 	}
@@ -1376,7 +1376,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 	}
 
 	.homepage header {
@@ -1386,11 +1386,12 @@
 
 	header {
 		margin-bottom: 1em;
+		text-align: center;
 	}
 
 		header h2 {
 			text-transform: uppercase;
-			font-size: 2.2em;
+			font-size: 3em;
 			font-weight: 700;
 		}
 
@@ -1537,7 +1538,7 @@
 		position: relative;
 		margin-top: 2em;
 		background: #2f2f2f;
-		background: rgba(128, 128, 128, 0.05);
+		background: white;
 		border-radius: 0.50em;
 		display: inline-block;
 		padding: 0.50em 0.75em 0.30em 0.75em;
@@ -1565,15 +1566,15 @@
 				border-radius: 100%;
 				border: 0;
 				color: #555;
-				color: rgba(255, 255, 255, 0.2);
+				color: #76B3DF;
 			}
 
 				ul.icons li a:hover {
-					color: #FFF;
+					color: black;
 				}
 
 			ul.icons li.active a {
-				color: #FFF;
+				color: black;
 			}
 
 	ul.info li {
@@ -1937,10 +1938,10 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				font-weight: 700;
-				font-size: 1em;
+				font-size: 1.0em;
 				outline: 0;
-				color: #aaa;
-				color: rgba(255, 255, 255, 0.6);
+				color: white;
+				color: white;
 			}
 
 				#nav > ul > li > a.icon:before, #nav > ul > li > span.icon:before {
@@ -2172,7 +2173,7 @@
 
 	#footer {
 		position: relative;
-		padding: 6em 0em;
+		padding: 1em 0em;
 		text-align: center;
 	}
 
@@ -2188,9 +2189,10 @@
 
 	.copyright {
 		position: relative;
-		padding: 2em 0em 3em 0em;
+		padding: 0em 0em 2.2em 0em;
 		text-align: center;
-		color: rgba(255, 255, 255, 0.2);
+		color: white;
+		font-size: 1.6em;
 	}
 
 /* Featured */
@@ -2325,7 +2327,7 @@
 		/* Footer */
 
 			#footer {
-				padding: 5em 0em;
+				padding: 1em 0em;
 			}
 
 		/* Portfolio */
@@ -2695,7 +2697,7 @@
 		/* Footer */
 
 			#footer {
-				padding: 6em 0em;
+				padding: 1em 0em;
 			}
 
 				#footer .actions {
