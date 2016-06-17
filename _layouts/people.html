@@ -73,7 +73,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-											  <h2>Related Images</h2>
+											  <h2>Images</h2>
 										      <img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}">
 										  {% endfor %}									
 										  
