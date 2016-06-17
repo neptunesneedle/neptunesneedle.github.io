@@ -83,7 +83,7 @@
 										{% else %}
 										
 										  {% for page in page.relatedimagessource %}
-										      <p>Public Domain <a href="page">Source</a>
+										      <p>Public Domain <a href="{{page}}">Source</a>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -103,7 +103,7 @@
 										{% else %}
 										
 										  {% for page in page.relatedimagessource2 %}
-										      <p>Public Domain <a href="page">Source</a>
+										      <p>Public Domain <a href="{{page}}">Source</a>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -122,7 +122,7 @@
 										{% else %}
 										
 										  {% for page in page.relatedimagessource3 %}
-										      <p>Public Domain <a href="page">Source</a>
+										      <p>Public Domain <a href="{{page}}">Source</a>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -142,7 +142,7 @@
 										{% else %}
 										
 										  {% for page in page.relatedimagessource4 %}
-										      <p>Public Domain <a href="page">Source</a>
+										      <p>Public Domain <a href="{{page}}">Source</a>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -162,7 +162,7 @@
 										{% else %}
 										
 										  {% for page in page.relatedimagessource5 %}
-										      <p>Public Domain <a href="page">Source</a>
+										      <p>Public Domain <a href="{{page}}">Source</a>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -458,6 +458,65 @@
 										   {% for page in page.relatedmapscharts10 %}
 												<br>
 										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										  <br>
+										  <br>
+										  {% endif %}
+										  
+										  
+										  
+										  
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										{% if page.additionalsources == null %}
+										  <p></p>
+										{% else %}
+										  {% for page in page.additionalsources %}
+											  <h2>External Additional Sources</h2>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.additionalsources2 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.additionalsources3 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.additionalsources4 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.additionalsources5 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.additionalsources6 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.additionalsources7 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.additionalsources8 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %} 
+										  {% for page in page.additionalsources9 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.additionalsources10 %}
+												<br>
+										      <a href="{{page}}">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
