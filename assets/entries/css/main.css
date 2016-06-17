@@ -1352,24 +1352,21 @@
 		color: navy;
 	}
 
-	/* unvisited link */
-a:link {
-    color: navy;
-}
+
 
 /* visited link */
 a:visited {
-    color: #76B3DF;
+    color: navy;
 }
 
 /* mouse over link */
 a:hover {
-    color: #76B3DF;
+    color: black;
 }
 
 /* selected link */
 a:active {
-    color: #76B3DF;
+    color: navy;
 }
 	
 	
@@ -1593,11 +1590,11 @@ a:active {
 			}
 
 				ul.icons li a:hover {
-					color: black;
+					color: navy;
 				}
 
 			ul.icons li.active a {
-				color: black;
+				color: navy;
 			}
 
 	ul.info li {
@@ -1741,8 +1738,10 @@ a:active {
 	table {
 		width: 100%;
 		text-align: center;
-		color: white;
-		background: #76B3DF;
+		color: black;
+		background: white;
+		border-collapse: collapse;
+}
 
 	}
 	td {
@@ -1756,8 +1755,102 @@ a:active {
 				text-align: center;
 				font-weight: bold;
 				padding: 0.5em 1em 0.5em 1em;
+				background: #76B3DF;
+				color: white;
 			}
 
+	table, th, td {
+		border: 1px solid black;
+	}
+	
+	tr:nth-child(even) {background-color: #f2f2f2}
+	
+	tr:hover {
+		background-color: #76B3DF; 				
+		color: white;
+	}
+	
+	.searchbox {
+		margin-bottom:50px; 
+		margin-top:50px;
+		text-align: center; 
+		box-sizing: border-box; 
+
+
+	}
+	
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: navy;
+      font-weight: bold;
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: navy;
+      font-weight: bold;
+
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: navy;
+      font-weight: bold;
+
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: navy;
+      font-weight: bold;
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+.buttonsub {
+   background: #76b3df;
+   padding: 5.5px 11px;
+   color: white;
+   font-size: 24px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.buttonsub:hover {
+   background: navy;
+   color: white;
+   }
+.buttonsub:active {
+   background: navy;
+   color: white;
+   }
+   
+.buttonsubonthatpage {
+   background: navy;
+   padding: 5.5px 11px;
+   color: white;
+   font-size: 24px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.buttonsubonthatpage:hover {
+   background: navy;
+   color: white;
+   }
+.buttonsubonthatpage:active {
+   background: navy;
+   color: white;
+   }
 	
 
 /* Buttons */

@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head> {% include searchhead.html %} </head>
-<body style>
-{{ content }}
+
+<head>
+{% include head.html %}
+
+{% include searchscripts.html %}
+
+</head>
+
+<body class="left-sidebar">
+		<div id="page-wrapper">
+ 
+			{% include header.html %}
+  
+		</div>
+		
+<div id="main">			
+
+		
+	{{ content }}
+	
+</div>
+	
+	 {% include footer.html %}
+			
+  {% include scripts.html %}
+			
+    </body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
+
+
+
+
+
+
+
+
 </html>
