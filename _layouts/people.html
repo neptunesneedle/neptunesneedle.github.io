@@ -70,105 +70,148 @@
 										{% if page.relatedimagessource == null %}
 										  <p></p>
 										{% else %}
-										  {% for page in site.pages %}
-												{% if page.relatedimagessource != null %}
-
+										
+										  {% for page in page.title %}
 											  <h2>Related Images</h2>
-										      <img src="/images/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page.title}}">
-											  <p>Public Domain. <a href="{{page.relatedimagessource}}">Source</a></p>
-											  
-												{% endif %}
-
-										  {% endfor %}
-										  
-										  {% for page in site.pages %}
-												{% if page.relatedimagessource2 != null %}
-
-											  <h2>Related Images</h2>
-										      <img src="/images/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}2.jpg" alt="{{page.title}}">
-											  <p>Public Domain. <a href="{{page.relatedimagessource2}}">Source</a></p>
-											  
-												{% endif %}
-
-										  {% endfor %}
-										  
-										  {% for page in site.pages %}
-												{% if page.relatedimagessource3 != null %}
-
-											  <h2>Related Images</h2>
-										      <img src="/images/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}3.jpg" alt="{{page.title}}">
-											  <p>Public Domain. <a href="{{page.relatedimagessource3}}">Source</a></p>
-											  
-												{% endif %}
-
-										  {% endfor %}
-										  
-										  {% for page in site.pages %}
-												{% if page.relatedimagessource4 != null %}
-
-											  <h2>Related Images</h2>
-										      <img src="/images/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}4.jpg" alt="{{page.title}}">
-											  <p>Public Domain. <a href="{{page.relatedimagessource4}}">Source</a></p>
-											  
-												{% endif %}
-
-										  {% endfor %}
-										  
-										  {% for page in site.pages %}
-												{% if page.relatedimagessource5 != null %}
-
-											  <h2>Related Images</h2>
-										      <img src="/images/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}5.jpg" alt="{{page.title}}">
-											  <p>Public Domain. <a href="{{page.relatedimagessource5}}">Source</a></p>
-											  
-												{% endif %}
-
-										  {% endfor %}
+										      <img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}">
+										  {% endfor %}									
 										  
 										{% endif %}
+										
+										{% if page.relatedimagessource == null %}
+										<p></p>
+										{% else %}
+										
+										  {% for page in page.relatedimagessource %}
+										      <p>Public Domain <a href="page">Source</a>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource2 == null %}
+										  <p></p>
+										{% else %}
+										
+										  {% for page in page.title %}
+										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource2 == null %}
+										<p></p>
+										{% else %}
+										
+										  {% for page in page.relatedimagessource2 %}
+										      <p>Public Domain <a href="page">Source</a>
+										  {% endfor %}									
+										  
+										{% endif %}
+										{% if page.relatedimagessource3 == null %}
+										  <p></p>
+										{% else %}
+										
+										  {% for page in page.title %}
+										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource3 == null %}
+										<p></p>
+										{% else %}
+										
+										  {% for page in page.relatedimagessource3 %}
+										      <p>Public Domain <a href="page">Source</a>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource4 == null %}
+										  <p></p>
+										{% else %}
+										
+										  {% for page in page.title %}
+										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource4 == null %}
+										<p></p>
+										{% else %}
+										
+										  {% for page in page.relatedimagessource4 %}
+										      <p>Public Domain <a href="page">Source</a>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource5 == null %}
+										  <p></p>
+										{% else %}
+										
+										  {% for page in page.title %}
+										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										  {% endfor %}									
+										  
+										{% endif %}
+										
+										{% if page.relatedimagessource5 == null %}
+										<p></p>
+										{% else %}
+										
+										  {% for page in page.relatedimagessource5 %}
+										      <p>Public Domain <a href="page">Source</a>
+										  {% endfor %}									
+										  
+										{% endif %}
+				
+				
+				
 				
 										{% if page.relatedperson == null %}
 										  <p></p>
 										{% else %}
 										  {% for page in page.relatedperson %}
 											  <h2>Related People</h2>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson2 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson3 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson4 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson5 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson6 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson7 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson8 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson9 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedperson10 %}
 												<br>
-										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
@@ -182,43 +225,43 @@
 										{% else %}
 										  {% for page in page.relatedships %}
 											  <h2>Related Ships</h2>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships2 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships3 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships4 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships5 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships6 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships7 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships8 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships9 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedships10 %}
 												<br>
-										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
@@ -231,43 +274,43 @@
 										{% else %}
 										  {% for page in page.relatedevents %}
 											  <h2>Related Events</h2>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedevents2 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedevents3 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedevents4 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedevents5 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedevents6 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedevents7 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedevents8 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %} 
 										  {% for page in page.relatedevents9 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedevents10 %}
 												<br>
-										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/events/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
@@ -280,43 +323,43 @@
 										{% else %}
 										  {% for page in page.relatedlocations %}
 											  <h2>Related Locations</h2>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedlocations2 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedlocations3 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedlocations4 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedlocations5 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedlocations6 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedlocations7 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedlocations8 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %} 
 										  {% for page in page.relatedlocations9 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedlocations10 %}
 												<br>
-										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
@@ -328,43 +371,43 @@
 										{% else %}
 										  {% for page in page.relateddocuments %}
 											  <h2>Related Documents</h2>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relateddocuments2 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relateddocuments3 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relateddocuments4 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relateddocuments5 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relateddocuments6 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relateddocuments7 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relateddocuments8 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %} 
 										  {% for page in page.relateddocuments9 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relateddocuments10 %}
 												<br>
-										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/documents/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
@@ -378,43 +421,43 @@
 										{% else %}
 										  {% for page in page.relatedmapscharts %}
 											  <h2>Related Maps & Charts</h2>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedmapscharts2 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedmapscharts3 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedmapscharts4 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  {% for page in page.relatedmapscharts5 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedmapscharts6 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedmapscharts7 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedmapscharts8 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %} 
 										  {% for page in page.relatedmapscharts9 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										   {% for page in page.relatedmapscharts10 %}
 												<br>
-										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}">{{page}}</a>
+										      <a href="http://neptunesneedle.org/mapscharts/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
 										  {% endfor %}
 										  <br>
 										  <br>
