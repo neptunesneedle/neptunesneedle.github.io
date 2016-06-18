@@ -1354,10 +1354,6 @@
 
 
 
-/* visited link */
-a:visited {
-    color: navy;
-}
 
 /* mouse over link */
 a:hover {
