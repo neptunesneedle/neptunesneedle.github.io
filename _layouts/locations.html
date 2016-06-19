@@ -28,15 +28,15 @@
 										<table style="width:100%">
 										  <tr>
 											<th>Region</th>
-											<th>Occupation</th>
-											<th>Born</th> 
-											<th>Died</th>
+											<th>Type</th>
+											<th>Latitude</th> 
+											<th>Longitude</th>
 										  </tr>
 										  <tr>
 											<td>{{page.region}}</td>
-											<td>{{page.occupation}}</td>
-											<td>{{page.birthyear}}</td> 
-											<td>{{page.deathyear}}</td>
+											<td>{{page.type}}</td>
+											<td>{{page.latitude}}</td> 
+											<td>{{page.longitude}}</td>
 										  </tr>
 										</table>
 										</br>
@@ -72,7 +72,7 @@
 										<p>{{page.p29}}</p>
 										<p>{{page.p30}}</p>
 
-										{% if page.source == null %}
+{% if page.source == null %}
 										  <p></p>
 										{% else %}
 										  {% for page in page.source %}
@@ -151,6 +151,7 @@
 										      <a href="{{ page }}">{{page}}</a>
 										  {% endfor %}
 										{% endif %}
+
 										
 										{% if page.imagessource == null %}
 										  <p></p>
@@ -158,7 +159,7 @@
 										
 										  {% for page in page.title %}
 											  <h2>Images</h2>
-										      <img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}">
+										      <img src="/images/entries/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}">
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -178,7 +179,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -197,7 +198,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -217,7 +218,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -237,7 +238,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/locations/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -614,7 +615,7 @@
 									</article>
 										
 									<div class="wrapper">
-										<a href="/search/people/" class="button">Back to People Search</a>
+										<a href="/search/locations/" class="button">Back to Locations Search</a>
 									</div>
 
 								</div>

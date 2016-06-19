@@ -23,11 +23,7 @@
 	<thead>
 		<tr>
 			<th style="width:30%;"><span class="sort" data-sort="title">Name</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Region</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Occupation</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Birth Year</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Death Year</span></th>
-			
+			<th style="width:30%;"><span class="sort" data-sort="title">Category</span></th>
 		</tr>
 	</thead>
 	<tbody class="list">
@@ -35,10 +31,37 @@
 		{% if page.layout == 'people' %}
 		<tr>
 			<td class="title"><a href="/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
-			<td class="region">{{ page.region }}</td>
-			<td class="occupation">{{ page.occupation }}</td>
-			<td class="birthyear">{{ page.birthyear }}</td>
-			<td class="deathyear">{{ page.deathyear }}</td>
+			<td class="category">People</td>
+		</tr>
+		{% endif %}
+		{% if page.layout == 'ships' %}
+		<tr>
+			<td class="title"><a href="/ships/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="category">Ships</td>
+		</tr>
+		{% endif %}
+		{% if page.layout == 'events' %}
+		<tr>
+			<td class="title"><a href="/events/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="category">Events</td>
+		</tr>
+		{% endif %}
+		{% if page.layout == 'locations' %}
+		<tr>
+			<td class="title"><a href="/locations/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="category">Locations</td>
+		</tr>
+		{% endif %}
+		{% if page.layout == 'documents' %}
+		<tr>
+			<td class="title"><a href="/documents/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="category">Documents</td>
+		</tr>
+		{% endif %}
+		{% if page.layout == 'mapscharts' %}
+		<tr>
+			<td class="title"><a href="/mapscharts/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="category">Maps & Charts</td>
 		</tr>
 		{% endif %}
 	{% endfor %}

@@ -22,22 +22,22 @@
 	<thead>
 		<tr>
 			<th style="width:30%;"><span class="sort" data-sort="title">Name</span></th>
+			<th style="width:30%;"><span class="sort" data-sort="title">Author</span></th>
+			<th style="width:30%;"><span class="sort" data-sort="title">Primary/Secondary</span></th>
+			<th style="width:30%;"><span class="sort" data-sort="title">Date</span></th>
 			<th style="width:30%;"><span class="sort" data-sort="title">Region</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Occupation</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Birth Year</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Death Year</span></th>
 			
 		</tr>
 	</thead>
 	<tbody class="list">
 	{% for page in site.pages %}
-		{% if page.layout == 'people' %}
+		{% if page.layout == 'documents' %}
 		<tr>
-			<td class="title"><a href="/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="title"><a href="/documents/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="author">{{ page.author }}</td>
+			<td class="primarysecondary">{{ page.primarysecondary }}</td>
+			<td class="date">{{ page.date }}</td>
 			<td class="region">{{ page.region }}</td>
-			<td class="occupation">{{ page.occupation }}</td>
-			<td class="birthyear">{{ page.birthyear }}</td>
-			<td class="deathyear">{{ page.deathyear }}</td>
 		</tr>
 		{% endif %}
 	{% endfor %}
@@ -53,7 +53,7 @@
 <script type="text/javascript">
 
 var options = {
-  valueNames: ['title', 'region', 'occupation', 'birthyear', 'deathyear']
+  valueNames: ['title', 'author', 'primarysecondary', 'date', 'region']
 };
 
 var entryList = new List('entry-list', options);
