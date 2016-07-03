@@ -1,6 +1,10 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
 ///
-/// Landscape by Pixelarity
-/// pixelarity.com @pixelarity
+/// Identity by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
 
@@ -9,98 +13,54 @@
 	form {
 		margin: 0 0 _size(element-margin) 0;
 
-		&:after {
-			content: '';
-			display: block;
-			clear: both;
-			height: 1px;
-		}
+		> .field {
+			margin: 0 0 _size(element-margin) 0;
 
-		.field {
-			position: relative;
-			float: left;
-			margin: 0 0 (_size(gutter) * 0.5) 0;
-			vertical-align: top;
-			width: 100%;
-		}
-
-		.half {
-			width: calc(50% + #{_size(gutter) * 0.25}) !important;
-			padding-left: _size(gutter) * 0.5;
-		}
-
-		.half.first {
-			width: calc(50% - #{_size(gutter) * 0.25}) !important;
-			padding-left: 0;
-		}
-
-		:last-child {
-			margin-bottom: 0;
-		}
-
-		.half:nth-last-child(2) {
-			margin-bottom: 0;
-		}
-
-		.actions {
-			position: relative;
-			clear: both;
-			margin-bottom: 0 !important;
-		}
-
-		@include breakpoint(xsmall) {
-			.half {
-				width: 100% !important;
-				padding-left: 0;
-			}
-
-			.half.first {
-				width: 100% !important;
-				padding-left: 0;
-			}
-
-			.half:nth-last-child(2) {
-				margin: 0 0 (_size(element-margin) * 0.65) 0;
+			> :last-child {
+				margin-bottom: 0;
 			}
 		}
 	}
 
 	label {
+		color: _palette(fg-bold);
 		display: block;
 		font-size: 0.9em;
-		font-weight: _font(weight-bold);
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select,
 	textarea {
 		@include vendor('appearance', 'none');
-		background-color: transparent;
 		border-radius: _size(border-radius);
-		border: none;
-		border: solid _size(border-width);
+		border: solid 1px _palette(border);
 		color: inherit;
 		display: block;
 		outline: 0;
-		padding: 0 0.75em;
+		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
 
 		&:invalid {
 			box-shadow: none;
 		}
+
+		&:focus {
+			border-color: _palette(highlight);
+		}
 	}
 
 	.select-wrapper {
-		@include icon;
+		@include icon('\f078');
 		display: block;
 		position: relative;
 
 		&:before {
-			content: '\f078';
+			color: _palette(border);
 			display: block;
 			height: _size(element-height);
 			line-height: _size(element-height);
@@ -125,7 +85,7 @@
 	}
 
 	textarea {
-		padding: 0.5em 0.75em;
+		padding: 0.75em 1em;
 	}
 
 	input[type="checkbox"],
@@ -140,6 +100,7 @@
 
 		& + label {
 			@include icon;
+			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -149,8 +110,9 @@
 			position: relative;
 
 			&:before {
+				background: _palette(border-bg);
 				border-radius: _size(border-radius);
-				border: solid _size(border-width);
+				border: solid 1px _palette(border);
 				content: '';
 				display: inline-block;
 				height: (_size(element-height) * 0.6);
@@ -158,22 +120,27 @@
 				line-height: (_size(element-height) * 0.575);
 				position: absolute;
 				text-align: center;
-				top: 0;
+				top: 0.15em;
 				width: (_size(element-height) * 0.6);
 			}
 		}
 
 		&:checked + label {
 			&:before {
+				color: _palette(highlight);
 				content: '\f00c';
+			}
+		}
+
+		&:focus + label {
+			&:before {
+				border-color: _palette(highlight);
 			}
 		}
 	}
 
 	input[type="checkbox"] {
 		& + label {
-			margin-bottom: 0;
-
 			&:before {
 				border-radius: _size(border-radius);
 			}
@@ -182,8 +149,6 @@
 
 	input[type="radio"] {
 		& + label {
-			margin-bottom: 0;
-
 			&:before {
 				border-radius: 100%;
 			}
@@ -191,115 +156,26 @@
 	}
 
 	::-webkit-input-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
-
-	@mixin color-form($p: null) {
-		$highlight: _palette($p, highlight);
-
-		label {
-			color: _palette($p, fg-bold);
-		}
-
-		input[type="text"],
-		input[type="password"],
-		input[type="email"],
-		select,
-		textarea {
-			border-color: _palette($p, border);
-
-			&:focus {
-				@if $p == $highlight {
-					border-color: _palette($p, fg-bold);
-					box-shadow: 0 0 0 _size(border-width) _palette($p, fg-bold);
-				}
-				@else {
-					border-color: _palette(accent, bg);
-					box-shadow: 0 0 0 _size(border-width) _palette(accent, bg);
-				}
-			}
-		}
-
-		.select-wrapper {
-			&:before {
-				color: _palette($p, border);
-			}
-		}
-
-		input[type="checkbox"],
-		input[type="radio"], {
-			& + label {
-				color: _palette($p, fg);
-
-				&:before {
-					border-color: _palette($p, border);
-				}
-			}
-
-			&:checked + label {
-				&:before {
-					@if $p == $highlight {
-						background-color: _palette($p, fg-bold);
-						border-color: _palette($p, fg-bold);
-						color: _palette($p, bg);
-					}
-					@else {
-						background-color: _palette(accent, bg);
-						border-color: _palette(accent, bg);
-						color: _palette(accent, fg-bold);
-					}
-				}
-			}
-
-			&:focus + label {
-				&:before {
-					@if $p == $highlight {
-						border-color: _palette($p, fg-bold);
-						box-shadow: 0 0 0 _size(border-width) _palette($p, fg-bold);
-					}
-					@else {
-						border-color: _palette(accent, bg);
-						box-shadow: 0 0 0 _size(border-width) _palette(accent, bg);
-					}
-				}
-			}
-		}
-
-		::-webkit-input-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		:-moz-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		::-moz-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		:-ms-input-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		.formerize-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-	}
-
-	@include color-form;

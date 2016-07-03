@@ -3,18 +3,18 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'font-awesome.min.css';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Bitter:400,700|Pacifico');
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
 
 /*
-	Landscape by Pixelarity
-	pixelarity.com @pixelarity
+	Identity by Pixelarity
+	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
 	@include skel-breakpoints((
 		xlarge: '(max-width: 1680px)',
 		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
+		medium: '(max-width: 960px)',
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)',
 		xxsmall: '(max-width: 360px)'
@@ -25,12 +25,29 @@
 		boxModel: 'border'
 	));
 
-	@mixin color($p) {
-		@include color-typography($p);
-		@include color-button($p);
-		@include color-form($p);
-		@include color-list($p);
-		@include color-table($p);
+	@mixin icon-alt($content: false, $link: false) {
+		@include icon($content);
+		$size: _size(border-width) * 1.25;
+
+		&:before {
+			color: _palette(bg);
+			text-shadow: $size 0px 0px _palette(border),
+						($size * -1) 0px 0px _palette(border),
+						0px $size 0px _palette(border),
+						0px ($size * -1) 0px _palette(border);
+
+		}
+
+		@if $link {
+			&:hover {
+				&:before {
+					text-shadow: $size 0px 0px _palette(highlight),
+								($size * -1) 0px 0px _palette(highlight),
+								0px $size 0px _palette(highlight),
+								0px ($size * -1) 0px _palette(highlight);
+				}
+			}
+		}
 	}
 
 // Base.
@@ -42,11 +59,11 @@
 
 	@import 'components/form';
 	@import 'components/icon';
-	@import 'components/image';
 	@import 'components/list';
-	@import 'components/table';
 	@import 'components/button';
 
 // Layout.
 
 	@import 'layout/main';
+	@import 'layout/footer';
+	@import 'layout/wrapper';

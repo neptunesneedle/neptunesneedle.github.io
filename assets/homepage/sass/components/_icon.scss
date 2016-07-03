@@ -1,6 +1,10 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
 ///
-/// Landscape by Pixelarity
-/// pixelarity.com @pixelarity
+/// Identity by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
 
@@ -8,8 +12,8 @@
 
 	.icon {
 		@include icon;
-		border-bottom: none;
 		position: relative;
+		border-bottom: none;
 
 		> .label {
 			display: none;

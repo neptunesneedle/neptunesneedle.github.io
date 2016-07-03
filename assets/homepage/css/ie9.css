@@ -1,48 +1,41 @@
 /*
-	Landscape by Pixelarity
-	pixelarity.com @pixelarity
+	Identity by Pixelarity
+	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* Header */
+/* Basic */
 
-	#header nav ul {
+	body {
+		background-image: url("../../images/bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom center;
+		background-attachment: fixed;
+	}
+
+		body:after {
+			display: none;
+		}
+
+/* List */
+
+	ul.icons li a:before {
+		color: #c8cccf;
+	}
+
+	ul.icons li a:hover:before {
+		color: #91e6cf;
+	}
+
+/* Wrapper */
+
+	#wrapper {
 		text-align: center;
 	}
 
-		#header nav ul li {
-			display: inline-block;
-		}
-
 /* Main */
 
-	#main .reel:after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	#main .slide {
-		float: left;
-	}
-
-		#main .slide > .inner {
-			padding-top: 8em;
-		}
-
-		#main .slide.left > .inner {
-			margin-right: auto;
-		}
-
-		#main .slide.center > .inner {
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		#main .slide.right > .inner {
-			margin-left: auto;
-		}
-
-	#main nav > * {
+	#main {
 		display: inline-block;
 	}

@@ -4,66 +4,53 @@
 @import 'libs/skel';
 
 /*
-	Landscape by Pixelarity
-	pixelarity.com @pixelarity
+	Identity by Pixelarity
+	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* Header */
+/* Basic */
 
-	#header {
-		nav {
-			ul {
-				text-align: center;
+	body {
+		background-image:		url('../../images/bg.jpg');
+		background-repeat:		no-repeat;
+		background-size:		cover;
+		background-position:	bottom center;
+		background-attachment:	fixed;
 
-				li {
-					display: inline-block;
+		&:after {
+			display: none;
+		}
+	}
+
+/* List */
+
+	ul {
+		&.icons {
+			li {
+				a {
+					&:before {
+						color: _palette(border);
+					}
+
+					&:hover {
+						&:before {
+							color: _palette(highlight);
+						}
+					}
 				}
 			}
 		}
 	}
 
+/* Wrapper */
+
+	#wrapper {
+		text-align: center;
+	}
+
 /* Main */
 
 	#main {
-		.reel {
-			&:after {
-				content: '';
-				display: block;
-				clear: both;
-			}
-		}
-
-		.slide {
-			float: left;
-
-			> .inner {
-				padding-top: 8em;
-			}
-
-			&.left {
-				> .inner {
-					margin-right: auto;
-				}
-			}
-
-			&.center {
-				> .inner {
-					margin-left: auto;
-					margin-right: auto;
-				}
-			}
-
-			&.right {
-				> .inner {
-					margin-left: auto;
-				}
-			}
-		}
-
-		nav {
-			> * {
-				display: inline-block;
-			}
-		}
+		display: inline-block;
 	}
