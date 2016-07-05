@@ -27,16 +27,14 @@
 										
 										<table style="width:100%">
 										  <tr>
+											<th>Species</th>
 											<th>Region</th>
-											<th>Occupation</th>
-											<th>Born</th> 
-											<th>Died</th>
+											<th>Water Type</th> 
 										  </tr>
 										  <tr>
+											<td>{{page.species}}</td>
 											<td>{{page.region}}</td>
-											<td>{{page.occupation}}</td>
-											<td>{{page.birthyear}}</td> 
-											<td>{{page.deathyear}}</td>
+											<td>{{page.watertype}}</td> 
 										  </tr>
 										</table>
 										</br>
@@ -152,13 +150,14 @@
 										  {% endfor %}
 										{% endif %}
 										
+										
 										{% if page.imagessource == null %}
 										  <p></p>
 										{% else %}
 										
 										  {% for page in page.title %}
 											  <h2>Images</h2>
-										      <img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}">
+										      <img src="/images/entries/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}">
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -178,7 +177,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -197,7 +196,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -217,7 +216,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -237,7 +236,7 @@
 										{% else %}
 										
 										  {% for page in page.title %}
-										      <h2><img src="/images/entries/people/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
+										      <h2><img src="/images/entries/ships/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}.jpg" alt="{{page}}"></h2>
 										  {% endfor %}									
 										  
 										{% endif %}
@@ -549,7 +548,6 @@
 										  {% endif %}
 										  
 										  
-										    
 										{% if page.relatedmarinelife == null %}
 										  <p></p>
 										{% else %}
@@ -598,9 +596,6 @@
 										  {% endif %}
 											
 										  
-										  
-										
-										
 										  
 										
 										
@@ -665,7 +660,7 @@
 									</article>
 										
 									<div class="wrapper">
-										<a href="/search/people/" class="button">Back to People Search</a>
+										<a href="/search/marinelife/" class="button">Back to Marine Life Search</a>
 									</div>
 
 								</div>

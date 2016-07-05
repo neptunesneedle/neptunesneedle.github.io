@@ -553,7 +553,58 @@
 										  {% endif %}
 										  
 										  
+										    
+										{% if page.relatedmarinelife == null %}
+										  <p></p>
+										{% else %}
+										  {% for page in page.relatedmarinelife %}
+											  <h2>Related marinelife</h2>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.relatedmarinelife2 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.relatedmarinelife3 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.relatedmarinelife4 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										  {% for page in page.relatedmarinelife5 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.relatedmarinelife6 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.relatedmarinelife7 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.relatedmarinelife8 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %} 
+										  {% for page in page.relatedmarinelife9 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										   {% for page in page.relatedmarinelife10 %}
+												<br>
+										      <a href="http://neptunesneedle.org/marinelife/{{ page | remove: ' ' | strip_newlines | downcase | md5 }}/">{{page}}</a>
+										  {% endfor %}
+										  <br>
+										  <br>
+										  {% endif %}
+											
 										  
+										  
+										
+										
 										  
 										
 										

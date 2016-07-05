@@ -5,8 +5,8 @@
 	<a href="/search/events/" class="buttonsub">Events</a>
 	<a href="/search/locations/" class="buttonsub" >Locations</a>
 	<a href="/search/documents/" class="buttonsub" >Documents</a>
-	<a href="/search/mapscharts/" class="buttonsubonthatpage">Maps & Charts</a>
-	<a href="/search/marinelife/" class="buttonsub">Marine Life</a>
+	<a href="/search/mapscharts/" class="buttonsub">Maps & Charts</a>
+	<a href="/search/marinelife/" class="buttonsubonthatpage">Marine Life</a>
 </div>
 
 
@@ -15,7 +15,7 @@
 
 
 <div class="searchbox">
-		<input type="text" class="search form-control" placeholder="Search Maps & Charts..." />
+		<input type="text" class="search form-control" placeholder="Search Marine Life..." />
 </div>
 
 <div style="overflow-x:auto;">
@@ -23,19 +23,19 @@
 	<thead>
 		<tr>
 			<th style="width:30%;"><span class="sort" data-sort="title">Name</span></th>
+			<th style="width:30%;"><span class="sort" data-sort="title">Species</span></th>
 			<th style="width:30%;"><span class="sort" data-sort="title">Region</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Author</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Date</span></th>			
+			<th style="width:30%;"><span class="sort" data-sort="title">Water Type</span></th>			
 		</tr>
 	</thead>
 	<tbody class="list">
 	{% for page in site.pages %}
-		{% if page.layout == 'mapscharts' %}
+		{% if page.layout == 'marinelife' %}
 		<tr>
-			<td class="title"><a href="/mapscharts/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="title"><a href="/marinelife/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="species">{{ page.species }}</td>
 			<td class="region">{{ page.region }}</td>
-			<td class="author">{{ page.author }}</td>
-			<td class="date">{{ page.date }}</td>
+			<td class="watertype">{{ page.watertype }}</td>
 		</tr>
 		{% endif %}
 	{% endfor %}
@@ -51,7 +51,7 @@
 <script type="text/javascript">
 
 var options = {
-  valueNames: ['title', 'region', 'author', 'date']
+  valueNames: ['title', 'species', 'region', 'watertype']
 };
 
 var entryList = new List('entry-list', options);
