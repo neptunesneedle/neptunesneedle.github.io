@@ -65,6 +65,12 @@
 			<td class="category">Maps & Charts</td>
 		</tr>
 		{% endif %}
+		{% if page.layout == 'marinelife' %}
+		<tr>
+			<td class="title"><a href="/marinelife/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
+			<td class="category">Marine Life</td>
+		</tr>
+		{% endif %}
 	{% endfor %}
 	</tbody>
 </table>
