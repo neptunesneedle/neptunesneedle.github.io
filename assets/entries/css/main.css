@@ -1606,7 +1606,7 @@ a:active {
 	ul.info h3 {
 		display: inline-block;
 		padding-bottom: 0.50em;
-		font-size: 1.2em;
+		font-size: 1.7em;
 	}
 
 	ul.info a {
@@ -2206,8 +2206,8 @@ a:active {
 
 	#content h3 {
 		display: block;
-		padding: 1.5em 0em 1em 0em;
-		font-size: 1.2em;
+		padding: 1em 0em 1em 0em;
+		font-size: 1.9em;
 	}
 
 	#content form {
