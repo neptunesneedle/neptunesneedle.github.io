@@ -1820,6 +1820,7 @@ a:active {
    font-family: helvetica, serif;
    text-decoration: none;
    vertical-align: middle;
+   display: inline-block
    }
 .buttonsub:hover {
    background: navy;

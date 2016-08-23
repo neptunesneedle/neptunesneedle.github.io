@@ -29,14 +29,12 @@
 										  <tr>
 											<th>Region</th>
 											<th>Type</th>
-											<th>Latitude</th> 
-											<th>Longitude</th>
+											<th>Maps & Charts (if available)</th> 
 										  </tr>
 										  <tr>
 											<td>{{page.region}}</td>
 											<td>{{page.type}}</td>
-											<td>{{page.latitude}}</td> 
-											<td>{{page.longitude}}</td>
+											<td><a href="/mapscharts/{{ page.noaaurl | remove: ' ' | strip_newlines | downcase | md5 }}/">Here</a></td>
 										  </tr>
 										</table>
 										</br>
