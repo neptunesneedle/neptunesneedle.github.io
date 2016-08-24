@@ -25,7 +25,6 @@
 			<th style="width:30%;"><span class="sort" data-sort="title">Name</span></th>
 			<th style="width:30%;"><span class="sort" data-sort="title">Region</span></th>
 			<th style="width:30%;"><span class="sort" data-sort="title">Type</span></th>
-			<th style="width:30%;"><span class="sort" data-sort="title">Maps & Charts (if available)</span></th>			
 		</tr>
 	</thead>
 	<tbody class="list">
@@ -35,8 +34,6 @@
 			<td class="title"><a href="/locations/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/">{{ page.title }}</a></td>
 			<td class="region">{{ page.region }}</td>
 			<td class="type">{{ page.type }}</td>
-			<td class="latitude">{{ page.latitude }}</td>
-			<td class="noaaurl"><a href="/mapscharts/{{ page.noaaurl | remove: ' ' | strip_newlines | downcase | md5 }}/">Here</a></td>
 		</tr>
 		{% endif %}
 	{% endfor %}
@@ -52,7 +49,7 @@
 <script type="text/javascript">
 
 var options = {
-  valueNames: ['title', 'region', 'type', 'noaaurl']
+  valueNames: ['title', 'region', 'type',]
 };
 
 var entryList = new List('entry-list', options);
