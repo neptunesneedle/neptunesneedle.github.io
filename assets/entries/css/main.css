@@ -1426,6 +1426,21 @@ a:active {
 		clear: both;
 	}
 
+	
+blockquote.stylepeter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+} 
+	
+	
+	
+	
+	
+	
+	
 /* Sections/Articles */
 
 	section, article {
